@@ -13,6 +13,7 @@ export default class CancelToken {
   constructor(executor: CancelExecutor) {
     let resolvePromise: ResolvePromise
     this.promise = new Promise<Cancel>(resolve => {
+      // @ts-ignore
       resolvePromise = resolve
     })
 
